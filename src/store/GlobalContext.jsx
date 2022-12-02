@@ -18,6 +18,8 @@ const GlobalContextProvider = (props) => {
 
   const reducer = (state, action) => {
     switch(action.type) {
+      case "CHANGENAME":
+        return {...state, name: action.payload}
       default:
         return state
     }
